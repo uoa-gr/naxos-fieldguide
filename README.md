@@ -21,6 +21,20 @@ Print this QR in the program handout:
 
 ![QR code to the field guide](naxos-fieldguide-qr.png)
 
+## Printable poster
+
+A one-page, print-ready poster (A4, 300 dpi) — minimalist editorial layout with a map of all
+stops, a Chóra detail inset, and the full five-day schedule:
+
+![Field-course poster](poster.jpg)
+
+- [`poster.png`](poster.png) — 2480×3508 px, lossless (best for printing)
+- [`poster.jpg`](poster.jpg) — smaller, for email/sharing
+
+It is generated from the same data. To rebuild after editing `build_data.py`:
+re-render the two basemaps with `poster-map.html` (Leaflet) and re-screenshot `poster.html`
+with headless Chrome at `--force-device-scale-factor=2`. See the comment block in `poster.html`.
+
 ## Use it
 
 Open the published page and tap **Add to home screen** (do this on Wi-Fi before the field days so it

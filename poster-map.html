@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>poster map render</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html,body{margin:0;padding:0;background:#fff}
+    #map{background:#fff}
+    .leaflet-tile-pane{filter:grayscale(100%) brightness(1.03) contrast(1.02)}
+    .leaflet-container{background:#fff}
+    .m{width:34px;height:34px;border-radius:50%;background:#0f0f0f;color:#fff;display:flex;align-items:center;justify-content:center;
+       font:600 17px Inter,Arial,sans-serif;border:2.5px solid #fff;box-shadow:0 0 0 1.5px #0f0f0f;box-sizing:border-box}
+    .m.sm{width:30px;height:30px;font-size:15px}
+    .m.base{background:#fff;border:2.5px solid #0f0f0f;box-shadow:none;position:relative}
+    .m.base::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:11px;height:11px;border-radius:50%;background:#0f0f0f}
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/poster-data.js"></script>
+  <script>
+    var P = window.POSTER;
+    var q = new URLSearchParams(location.search);
+    var W = parseInt(q.get("w") || "1200", 10), H = parseInt(q.get("h") || "1000", 10);
+    var MAXZ = parseFloat(q.get("max") || "12.4"), PAD = parseInt(q.get("pad") || "70", 10);
+    var nums = q.get("nums"), small = q.get("sm") === "1";
+    var mapEl = document.getElementById("map");
+    mapEl.style.width = W + "px"; mapEl.style.height = H + "px";
+
+    var set = null;
+    if (nums && nums !== "all") { set = {}; nums.split(",").forEach(function (n) { set[parseInt(n, 10)] = 1; }); }
+    var stops = P.mapStops.filter(function (s) { return !set || set[s.no]; });
+
+    var map = L.map("map", { zoomControl: false, attributionControl: false, zoomSnap: 0.1, fadeAnimation: false, preferCanvas: false });
+    var layer = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      maxZoom: 19, detectRetina: true, crossOrigin: true, updateWhenIdle: true, keepBuffer: 6
+    }).addTo(map);
+
+    function disc(no, isBase) {
+      var cls = "m" + (small ? " sm" : "") + (isBase ? " base" : "");
+      var sz = small ? 30 : 34;
+      return L.divIcon({ className: "", html: '<div class="' + cls + '">' + (isBase ? "" : '<span>' + no + '</span>') + '</div>',
+        iconSize: [sz, sz], iconAnchor: [sz / 2, sz / 2] });
+    }
+    var pts = [];
+    stops.forEach(function (s) { L.marker([s.lat, s.lng], { icon: disc(s.no, false) }).addTo(map); pts.push([s.lat, s.lng]); });
+    if (P.base) { L.marker([P.base.lat, P.base.lng], { icon: disc(0, true) }).addTo(map); pts.push([P.base.lat, P.base.lng]); }
+
+    map.fitBounds(L.latLngBounds(pts), { padding: [PAD, PAD], maxZoom: MAXZ });
+    var done = 0;
+    layer.on("load", function () { done++; window.__mapready = true; });
+    setTimeout(function () { window.__mapready = true; }, 9000);
+  </script>
+</body>
+</html>

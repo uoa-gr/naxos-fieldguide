@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naxos &amp; Koufonísi — field-course poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Italianno&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --ink:#0f0f0f; --grey:#666; --faint:#9a9a9a;
+      --rule:#111; --dash:#c9c9c9; --accent:#0066ff;
+      --serif:'EB Garamond','Iowan Old Style',Georgia,serif;
+      --sans:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;
+      --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{margin:0;background:#fff;font-family:var(--sans);color:var(--ink)}
+    .poster{width:1240px;height:1754px;background:#fff;margin:0;padding:54px 58px 44px;
+      display:flex;flex-direction:column;overflow:hidden}
+    .eyebrow{font:500 13px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+
+    /* ---- masthead ---- */
+    .mast{flex:0 0 auto}
+    .mast .titlewrap{display:flex;align-items:center;gap:22px;margin:14px 0 6px}
+    .mast .titlewrap .rule{flex:1;height:1px;background:var(--rule)}
+    .mast h1{font:500 62px var(--serif);letter-spacing:.5px;white-space:nowrap}
+    .mast .lede{font:italic 400 23px var(--serif);color:#454545;margin-top:2px}
+    .mast .meta{display:flex;align-items:center;gap:18px;margin-top:14px;font-size:14px;color:var(--grey)}
+    .mast .meta .v{font-family:var(--mono);color:var(--ink);font-size:13px}
+    .mast .meta .sep{width:1px;height:15px;background:var(--dash)}
+
+    /* ---- map row ---- */
+    .maprow{display:flex;gap:24px;margin-top:26px;flex:0 0 auto}
+    .mapmain{width:766px;height:700px;border:1px solid var(--rule);overflow:hidden;position:relative}
+    .mapmain img{width:100%;height:100%;object-fit:cover;display:block}
+    .rail{width:336px;display:flex;flex-direction:column}
+    .rail .insetcap{font:500 12px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:7px}
+    .inset{width:100%;height:460px;border:1px solid var(--rule);overflow:hidden}
+    .inset img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+    .legend{margin-top:18px;border-top:1px solid var(--rule);padding-top:14px}
+    .legend .li{display:flex;align-items:center;gap:11px;margin-bottom:11px;font-size:14px;color:#333}
+    .disc{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;border:2px solid #fff;
+      box-shadow:0 0 0 1.5px var(--ink);display:flex;align-items:center;justify-content:center;font:600 11px var(--sans)}
+    .disc.base{background:#fff;box-shadow:none;position:relative}
+    .disc.base::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink)}
+    .legend .count{font-family:var(--mono);font-size:13px;color:var(--grey);margin-top:3px}
+    .mapcap{font:italic 400 14px var(--serif);color:var(--grey);margin-top:9px}
+
+    /* ---- stops ---- */
+    .stops{flex:1 1 auto;margin-top:28px;column-count:2;column-gap:50px}
+    .day{break-inside:avoid;margin-bottom:25px}
+    .day:first-child{margin-top:0}
+    .dayhead{display:flex;align-items:baseline;gap:14px}
+    .dayhead h2{font:italic 500 20px var(--serif);white-space:nowrap}
+    .dayhead .r{flex:1;height:1px;background:var(--rule)}
+    .daymeet{font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.02em;margin:4px 0 10px}
+    .row{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:10px;
+      padding:9px 0;border-bottom:1px dashed var(--dash)}
+    .row:last-child{border-bottom:0}
+    .row .n{width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;
+      display:flex;align-items:center;justify-content:center;font:600 11px var(--sans)}
+    .row .n.off{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+    .row .nm{font:400 17.5px var(--serif);color:var(--ink)}
+    .row .nm small{font:italic 400 13.5px var(--serif);color:var(--faint);margin-left:6px}
+    .row .tm{font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+
+    /* ---- footer ---- */
+    .foot{flex:0 0 auto;border-top:1px solid var(--rule);padding-top:16px;margin-top:8px;
+      display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .foot .live{display:flex;align-items:center;gap:16px}
+    .foot .live img{width:96px;height:96px;display:block}
+    .foot .live .cta .k{font:500 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+    .foot .live .cta .t{font:italic 400 19px var(--serif);margin:3px 0 4px}
+    .foot .live .cta .u{font-family:var(--mono);font-size:14px;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px}
+    .foot .sign{text-align:right}
+    .foot .sign .name{font-family:'Italianno',cursive;font-size:44px;line-height:.9;color:var(--ink)}
+    .foot .sign .role{font-size:12.5px;color:var(--grey);margin-top:2px}
+    .attrib{flex:0 0 auto;text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:12px;letter-spacing:.02em}
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <header class="mast">
+      <div class="eyebrow">CIVIS · Blended Intensive Programme 2026</div>
+      <div class="titlewrap"><span class="rule"></span><h1>Naxos &amp; Koufonísi</h1><span class="rule"></span></div>
+      <div class="lede">Climate change &amp; coastal landscape evolution — a five-day field guide</div>
+      <div class="meta">
+        <span><span class="v">29 Jun – 3 Jul 2026</span></span><span class="sep"></span>
+        <span>Cyclades, Greece</span><span class="sep"></span>
+        <span>National &amp; Kapodistrian University of Athens · Faculty of Geology &amp; Geoenvironment</span>
+      </div>
+    </header>
+
+    <section class="maprow">
+      <div class="mapmain"><img src="assets/img/poster-map-main.png" alt="Map of Naxos with field stops" /></div>
+      <div class="rail">
+        <div class="insetcap">Chóra &amp; west coast · detail</div>
+        <div class="inset"><img src="assets/img/poster-map-chora.png" alt="Detail map of Chóra" /></div>
+        <div class="legend">
+          <div class="li"><span class="disc">7</span><span>Numbered field stop</span></div>
+          <div class="li"><span class="disc base"></span><span>Bus station — daily start &amp; return</span></div>
+          <div class="count" id="legcount"></div>
+        </div>
+      </div>
+    </section>
+    <div class="mapcap">Náxos &amp; the Lesser Cyclades — numbers mark each field stop and correspond to the schedule below.</div>
+
+    <section class="stops" id="stops"></section>
+
+    <footer class="foot">
+      <div class="live">
+        <img src="naxos-fieldguide-qr.png" alt="QR code to the live field guide" />
+        <div class="cta">
+          <div class="k">Live · offline field guide</div>
+          <div class="t">Open the interactive guide &amp; navigate each stop &rarr;</div>
+          <span class="u">uoa-gr.github.io/naxos-fieldguide</span>
+        </div>
+      </div>
+      <div class="sign">
+        <div class="name">Niki Evelpidou</div>
+        <div class="role">Course director · NKUA</div>
+      </div>
+    </footer>
+    <div class="attrib">Basemap © CARTO · © OpenStreetMap contributors</div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/poster-data.js"></script>
+  <script>
+    var P = window.POSTER;
+    var modeWord = { foot: "on foot", bus: "by bus", boat: "by boat" };
+    var host = document.getElementById("stops");
+    P.days.forEach(function (d) {
+      var day = document.createElement("div");
+      day.className = "day";
+      var rows = d.stops.map(function (s) {
+        var off = s.onMap ? "" : " off";
+        var note = s.mode === "boat" ? '<small>by boat</small>' : (s.mode === "foot" ? '<small>on foot</small>' : "");
+        return '<div class="row"><span class="n' + off + '">' + s.no + '</span>' +
+          '<span class="nm">' + s.title + note + '</span>' +
+          '<span class="tm">' + s.time + '</span></div>';
+      }).join("");
+      day.innerHTML =
+        '<div class="dayhead"><h2>Day ' + d.n + ' · ' + d.weekday + ' ' + d.date.replace(" 2026", "") + '</h2><span class="r"></span></div>' +
+        '<div class="daymeet">' + d.theme + '  ·  meet ' + d.departure + ' at the bus station</div>' +
+        rows;
+      host.appendChild(day);
+    });
+    var total = P.days.reduce(function (a, d) { return a + d.stops.length; }, 0);
+    document.getElementById("legcount").textContent = total + " stops · 5 days · bus, boat & on foot";
+    window.__posterready = true;
+  </script>
+</body>
+</html>
