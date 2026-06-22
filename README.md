@@ -13,6 +13,14 @@ once opened, which matters on the islands where signal is patchy.
 Prepared for **Prof. Niki Evelpidou**, National & Kapodistrian University of Athens (NKUA),
 Faculty of Geology & Geoenvironment.
 
+## Live site
+
+**https://uoa-gr.github.io/naxos-fieldguide/**
+
+Print this QR in the program handout:
+
+![QR code to the field guide](naxos-fieldguide-qr.png)
+
 ## Use it
 
 Open the published page and tap **Add to home screen** (do this on Wi-Fi before the field days so it
