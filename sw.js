@@ -1,4 +1,4 @@
-var CACHE = "naxos-fieldguide-v1";
+var CACHE = "naxos-fieldguide-v2";
 
 var CORE = [
   "./",
