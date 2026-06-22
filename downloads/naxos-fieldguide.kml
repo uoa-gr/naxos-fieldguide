@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>CIVIS BIP 2026 — Naxos &amp; Koufonisi</name>
+<Folder><name>Day 1 — 29 June 2026</name>
+<Placemark><name>09:00 · Central Bus Station (KTEL)</name><description>Meeting point for the day. The bus departs at 09:00 — please arrive 10 minutes early.</description><Point><coordinates>25.37442,37.10799,0</coordinates></Point></Placemark>
+<Placemark><name>09:15 · Portara — Temple of Apollo</name><description>A short walk to the marble gateway of the unfinished Temple of Apollo on the Palatía islet. A vantage point to introduce the island&#x27;s landscape and recall the earlier, more humid palaeoclimate.</description><Point><coordinates>25.37247,37.11013,0</coordinates></Point></Placemark>
+<Placemark><name>10:45 · Kouros of Melanes</name><description>An unfinished colossal marble statue lying in its ancient quarry near Melanes, abandoned in the Archaic period — a vivid example of how the island&#x27;s geology shaped ancient quarrying and art.</description><Point><coordinates>25.45208,37.0835,0</coordinates></Point></Placemark>
+<Placemark><name>12:45 · Ancient Aqueduct of Flerio</name><description>Remains of the ancient aqueduct in the fertile Flerio plain between Melanes and Chora. We discuss the relationship between geology, relief and ancient water infrastructure.</description><Point><coordinates>25.44589,37.08762,0</coordinates></Point></Placemark>
+<Placemark><name>18:45 · Agia Anna – Paradeisos</name><description>On the coast we read sea-level indicators and fluctuations — how coastal features record past tectonic and eustatic sea-level change.</description><Point><coordinates>25.35371,37.06487,0</coordinates></Point></Placemark>
+<Placemark><name>21:00 · Ursulines Cultural Center</name><description>An evening class of traditional Greek dances in the historic former Ursuline school in Chora — a space that keeps local heritage and community life alive.</description><Point><coordinates>25.3768,37.1056,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Day 2 — 30 June 2026</name>
+<Placemark><name>09:00 · Central Bus Station (KTEL)</name><description>Meeting point. Departure at 09:00.</description><Point><coordinates>25.37442,37.10799,0</coordinates></Point></Placemark>
+<Placemark><name>09:30 · Apeiranthos</name><description>A mountain village in the heart of Naxos. At its Geological Museum we get an introduction to the island&#x27;s geological, geomorphological and palaeogeographical history (and a virtual visit to an emery mine), then a guided walk through the village with a local.</description><Point><coordinates>25.52024,37.07133,0</coordinates></Point></Placemark>
+<Placemark><name>17:30 · Lagouna — Agios Georgios</name><description>A 1.4 km coastal traverse from Chora covering a remarkable range of features.</description><Point><coordinates>25.36395,37.08687,0</coordinates></Point></Placemark>
+<Placemark><name>21:30 · Ursulines Cultural Center</name><description>A second evening of traditional Greek dance at the Ursulines Cultural Center in Chora.</description><Point><coordinates>25.3768,37.1056,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Day 3 — 1 July 2026</name>
+<Placemark><name>09:00 · Central Bus Station (KTEL)</name><description>Meeting point. Departure at 09:00.</description><Point><coordinates>25.37442,37.10799,0</coordinates></Point></Placemark>
+<Placemark><name>09:15 · Aplomata — Grotta</name><description>A coastal walk from the port toward Grotta, with excellent exposures of coastal geomorphology within an urban setting — our introduction to the interplay of geology, sea-level change, coastal processes and human occupation.</description><Point><coordinates>25.38189,37.10999,0</coordinates></Point></Placemark>
+<Placemark><name>11:30 · Agia Anna</name><description>Coastal transfer point before the sea crossing.</description><Point><coordinates>25.35504,37.06691,0</coordinates></Point></Placemark>
+<Placemark><name>11:45 · Paros (by boat)</name><description>Boat crossing to neighbouring Paros for coastal observations, returning to Chora in the afternoon.</description><Point><coordinates>25.1517,37.0856,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Day 4 — 2 July 2026</name>
+<Placemark><name>08:30 · Central Bus Station (KTEL)</name><description>Meeting point. Departure at 08:30.</description><Point><coordinates>25.37442,37.10799,0</coordinates></Point></Placemark>
+<Placemark><name>08:45 · Temple of Dionysus, Yria</name><description>By the Peritsís river, the island&#x27;s most important watercourse. Rebuilt repeatedly after floods since antiquity, the sanctuary was once reached through the bay — now the lagoon — in front of today&#x27;s airport.</description><Point><coordinates>25.38165,37.07748,0</coordinates></Point></Placemark>
+<Placemark><name>10:15 · Plaka beach</name><description>A textbook coast: three parallel rows of beachrock at different distances from the shoreline. We discuss the February storm events that damaged the coastal road, then snorkel to observe the beachrocks from within the sea.</description><Point><coordinates>25.37947,37.03586,0</coordinates></Point></Placemark>
+<Placemark><name>12:00 · Pyrgaki</name><description>Coastal dune system in the south of the island.</description><Point><coordinates>25.40631,36.975,0</coordinates></Point></Placemark>
+<Placemark><name>14:10 · Kagkanis Farm</name><description>A shared traditional meal in a rural setting — a welcome pause in the field-intensive schedule.</description><Point><coordinates>25.43805,37.0123,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Day 5 — 3 July 2026</name>
+<Placemark><name>08:00 · Central Bus Station (KTEL)</name><description>Meeting point. Departure at 08:00.</description><Point><coordinates>25.37442,37.10799,0</coordinates></Point></Placemark>
+<Placemark><name>08:15 · Volakas</name><description>Transfer through the south of the island toward the embarkation point.</description><Point><coordinates>25.55559,36.96916,0</coordinates></Point></Placemark>
+<Placemark><name>09:30 · Pano Koufonísi</name><description>We walk the magnificent coastline of Pano Koufonísi — sedimentary rocks sculpted by marine processes, with cliffs, pocket beaches and evaporite structures.</description><Point><coordinates>25.6053,36.9376,0</coordinates></Point></Placemark>
+</Folder>
+</Document></kml>
